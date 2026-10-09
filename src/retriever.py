@@ -6,8 +6,18 @@ from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
 from src.config import EMBED_MODEL, INDEX_DIR, RERANK_MODEL, TOP_K
+from src.ingest import embed_chunks
 
 MODES = ("dense", "bm25", "hybrid", "hybrid+rerank")
+
+_reranker = None  # loaded once, shared by all Retriever objects
+
+
+def _get_reranker():
+    global _reranker
+    if _reranker is None:
+        _reranker = CrossEncoder(RERANK_MODEL)
+    return _reranker
 
 
 def tokenize(text: str):
@@ -15,13 +25,24 @@ def tokenize(text: str):
 
 
 class Retriever:
-    def __init__(self):
-        self.index = faiss.read_index(str(INDEX_DIR / "faiss.index"))
-        with open(INDEX_DIR / "chunks.pkl", "rb") as f:
-            self.chunks = pickle.load(f)
-        self.embedder = SentenceTransformer(EMBED_MODEL)
+    def __init__(self, chunks=None, index=None, embedder=None):
+        """With no arguments, load the index saved by `python -m src.ingest`.
+        Otherwise use the chunks and FAISS index given (see from_chunks)."""
+        self.embedder = embedder or SentenceTransformer(EMBED_MODEL)
+        if chunks is None:
+            self.index = faiss.read_index(str(INDEX_DIR / "faiss.index"))
+            with open(INDEX_DIR / "chunks.pkl", "rb") as f:
+                self.chunks = pickle.load(f)
+        else:
+            self.index, self.chunks = index, chunks
         self.bm25 = BM25Okapi([tokenize(c["text"]) for c in self.chunks])
-        self._reranker = None  # loaded lazily
+
+    @classmethod
+    def from_chunks(cls, chunks, embedder=None):
+        """Build a retriever in memory, e.g. from PDFs a visitor uploaded."""
+        embedder = embedder or SentenceTransformer(EMBED_MODEL)
+        index = embed_chunks(chunks, embedder)
+        return cls(chunks=chunks, index=index, embedder=embedder)
 
     def _dense(self, query, n):
         vec = self.embedder.encode([query], normalize_embeddings=True).astype("float32")
@@ -54,10 +75,8 @@ class Retriever:
         else:
             ids = self._rrf([self._dense(query, pool), self._sparse(query, pool)])
             if mode == "hybrid+rerank":
-                if self._reranker is None:
-                    self._reranker = CrossEncoder(RERANK_MODEL)
                 cands = ids[:pool]
-                scores = self._reranker.predict(
+                scores = _get_reranker().predict(
                     [(query, self.chunks[i]["text"]) for i in cands])
                 ids = [i for _, i in sorted(zip(scores, cands), reverse=True)]
             ids = ids[:k]
