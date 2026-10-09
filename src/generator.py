@@ -32,6 +32,7 @@ def answer(question, chunks):
     resp = client.chat.completions.create(
         model=os.getenv("LLM_MODEL", "gpt-4o-mini"),
         temperature=0,
+        max_tokens=500,
         messages=[{"role": "system", "content": SYSTEM_PROMPT},
                   {"role": "user", "content": build_prompt(question, chunks)}],
     )
