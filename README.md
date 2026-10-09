@@ -1,7 +1,7 @@
 
 # Document Q&A Assistant (RAG) with Citations
 
-**Live demo:** _add your Hugging Face Spaces link here_
+**Live demo:** https://meghana-rag-assistant.streamlit.app
 
 Ask questions over your own PDFs. Every answer cites the exact source passage, and the assistant says "I don't know" when the documents don't contain the answer.
 
