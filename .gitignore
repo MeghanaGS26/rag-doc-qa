@@ -1,0 +1,7 @@
+venv/
+index/
+__pycache__/
+.pytest_cache/
+.env
+eval/results.csv
+data/docs/*.pdf

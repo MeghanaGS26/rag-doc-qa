@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What are the five software quality factors that McCall’s model includes in the product operation category?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 30
+  },
+  {
+    "question": "How long would it take a computer testing 240 keys per second to exhaustively search a key space of size 2^128, expressed in years?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 17
+  },
+  {
+    "question": "What two properties must cryptographic random numbers possess to be considered secure?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 14
+  },
+  {
+    "question": "What are some common types of errors found in user manuals and software help displays?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 19
+  },
+  {
+    "question": "How do the additional software quality factors of Expandability and Survivability relate to the components found in McCall’s factor model?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 38
+  },
+  {
+    "question": "What four components make up software from a software quality assurance perspective?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 26
+  },
+  {
+    "question": "How does the HMAC method incorporate a key into the hashing process differently from the approach of encrypting the hash value with a symmetric cipher?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 7
+  },
+  {
+    "question": "Why is a hash function deemed insecure if a known collision exists for it?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 8
+  },
+  {
+    "question": "How many inner rounds does each function Fm in the Tiger hash algorithm consist of?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 5
+  },
+  {
+    "question": "How can a systems analyst introduce a logical error into a debt-collection system by misinterpreting the decision-making step required after a client fails to pay despite receiving multiple notifications?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 16
+  },
+  {
+    "question": "How does the size of a key space affect the time required to perform an exhaustive key search?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 2
+  },
+  {
+    "question": "What role does standard test data play in the software quality assurance process?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 12
+  },
+  {
+    "question": "Why is a shared secret key necessary when using hash functions to verify message integrity?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 7
+  },
+  {
+    "question": "How did Soviet spies utilize one-time pads to communicate with their handlers in Moscow during the 1930s and 1940s?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 8
+  },
+  {
+    "question": "What are the specific accuracy, completeness, and timeliness requirements for the outputs of a club membership information system?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 31
+  },
+  {
+    "question": "What are the key learning outcomes for understanding the unique aspects of software quality assurance and the challenges of the software development environment?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 1
+  },
+  {
+    "question": "Why is an exhaustive key search considered infeasible for a simple substitution cipher?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 3
+  },
+  {
+    "question": "How was the disputed 1876 presidential election between Rutherford B. Hayes and Samuel J. Tilden ultimately resolved?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 12
+  },
+  {
+    "question": "What specific tasks does Teacher Support Software (TSS) handle regarding student performance and communication with parents?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 34
+  },
+  {
+    "question": "Why was it possible for a player to predict the entire deck in the AFS poker software?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 15
+  },
+  {
+    "question": "Why is adherence to specific documentation and coding standards required in software development units?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 17
+  },
+  {
+    "question": "What is a key reason why a software system that meets all functional requirements can still be considered inadequate by its users?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 28
+  },
+  {
+    "question": "What are the three main categories of requirements that a software developer must fulfill according to Pressman’s definition?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 21
+  },
+  {
+    "question": "How many people need to be in a room for there to be at least a 50% chance that two of them share the same birthday?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 2
+  },
+  {
+    "question": "What is the warranty policy for physical defects in AMGAL's documentation or distribution media?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 2
+  },
+  {
+    "question": "Why might different software requirement documents place varying levels of emphasis on specific quality factors?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 29
+  },
+  {
+    "question": "What is the name of the simple substitution cipher that uses a shift of three?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 2
+  },
+  {
+    "question": "How do internal software development departments typically interact with the marketing department or other internal requesters?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 9
+  },
+  {
+    "question": "How does the timing of defect detection opportunities in software development differ from those in traditional production processes?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 4
+  },
+  {
+    "question": "What are some common types of logical design errors that can occur when systems architects or software engineers formulate requirements?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 16
+  },
+  {
+    "question": "What are the two primary requirements documents that guide the execution of a software project?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 41
+  },
+  {
+    "question": "How does a codebook cipher function to encrypt and decrypt messages?",
+    "source": "BIS703-module-1-pdf.pdf",
+    "page": 9
+  },
+  {
+    "question": "What specific disclaimer does Dagal Features include in the limited warranty for its AMGAL product regarding performance and reliability?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 2
+  },
+  {
+    "question": "Why is the RC4 cipher considered a suitable source for generating cryptographic random numbers?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 16
+  },
+  {
+    "question": "What are the four main categories used to classify software errors, and who is ultimately responsible for causing them?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 15
+  },
+  {
+    "question": "What are the primary functions enabled by the modules described for membership management?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 36
+  },
+  {
+    "question": "What are the three most common types of errors associated with the faulty definition of software requirements?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 15
+  },
+  {
+    "question": "Why is ensuring the correct definition and development of operational possibilities considered a major challenge in the software industry compared to other industrial products?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 2
+  },
+  {
+    "question": "Who proposed the majority of the software quality sub-factors listed in the study?",
+    "source": "BIS714B-module-1-textbook (1).pdf",
+    "page": 41
+  },
+  {
+    "question": "What visual effect does overlaying two shares have on the contrast of the original image?",
+    "source": "BIS703-module-2-pdf.pdf",
+    "page": 13
+  }
+]
